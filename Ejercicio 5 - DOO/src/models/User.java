@@ -58,37 +58,39 @@ class User
 	}
 
 	@Override
-	public int hashCode() 
-	{
+	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((dni == null) ? 0 : dni.hashCode());
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) 
 	{
-		if (this == obj)
+		if (this == obj) 
+		{
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) 
+		{
 			return false;
-		if (!(obj instanceof User))
+		}
+		if (!(obj instanceof User)) 
+		{
 			return false;
+		}
 		User other = (User) obj;
 		if (dni == null) 
 		{
-			if (other.dni != null)
+			if (other.dni != null) 
+			{
 				return false;
-		} else if (!dni.equals(other.dni))
-			return false;
-		if (email == null) 
+			}
+		} else if (!dni.equals(other.dni)) 
 		{
-			if (other.email != null)
-				return false;
-		} else if (!email.equals(other.email))
 			return false;
+		}
 		return true;
 	}
 
@@ -105,6 +107,11 @@ class User
 		builder.append(name);
 		builder.append("]");
 		return builder.toString();
+	}
+
+	public String getDni() 
+	{
+		return dni;
 	}
 	
 	
