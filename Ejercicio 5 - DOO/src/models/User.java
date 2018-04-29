@@ -3,7 +3,7 @@ package models;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class User 
+public class User 
 {
 	private String dni;
 	private Integer age;
